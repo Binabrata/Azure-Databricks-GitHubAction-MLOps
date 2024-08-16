@@ -95,7 +95,7 @@ jobs:
 
     # Download Artifact: ARM-Templates
     - name: 'Download Artifact: ARM-Templates' 
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: 'ARM-Templates'
         path: ${{ github.workspace }}/ARM-Templates
