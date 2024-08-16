@@ -103,7 +103,7 @@ jobs:
         
     # Login to Azure
     - name: Login via Az module
-      uses: azure/login@v1.1
+      uses: azure/login@v2.1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         # set this if you will be using PowerShell
@@ -156,14 +156,14 @@ jobs:
 
     # Download Artifact: ARM-Templates
     - name: 'Download Artifact: ARM-Templates' 
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: 'ARM-Templates'
         path: ${{ github.workspace }}/ARM-Templates
         
     # Login to Azure
     - name: Login via Az module
-      uses: azure/login@v1.1
+      uses: azure/login@v2.1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         # set this if you will be using PowerShell
@@ -218,7 +218,7 @@ jobs:
 
     # Download Artifact: ARM-Templates
     - name: 'Download Artifact: ARM-Templates' 
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: 'ARM-Templates'
         path: ${{ github.workspace }}/ARM-Templates
@@ -226,7 +226,7 @@ jobs:
         
   # Login to Azure
     - name: Login via Az module
-      uses: azure/login@v1.1
+      uses: azure/login@v2.1.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         # set this if you will be using PowerShell
