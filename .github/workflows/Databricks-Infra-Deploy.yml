@@ -9,7 +9,7 @@ on:
       RESOURCE_GROUP:
         description: 'Resource Group Name'
         required: true
-        default: 'Azure-Databricks-MLOps-RG'
+        default: 'AZDatabricksMLOpsRG'
 
       # The Azure region to which to deploy your resources
       LOCATION:
@@ -21,13 +21,13 @@ on:
       WORKSPACE_NAME:
         description: 'Databricks workspace name'
         required: true
-        default: 'Azure-Databricks-MLOps-WS'
+        default: 'AZDatabricksMLOpsWS'
 
       # This is a KeyVault for holding the Service Principal to make Databricks API calls and to hold Databricks KeyVault backed Secrets
       KEY_VAULT_NAME:
         description: 'KeyVault name'
         required: true
-        default: 'Azure-Databricks-MLOps-KV'
+        default: 'AZDatabricksMLOpsKV'
 
       # This is a KeyVault for holding the Service Principal to make Databricks API calls and to hold Databricks KeyVault backed Secrets
       SUBSCRIPTION_ID:
