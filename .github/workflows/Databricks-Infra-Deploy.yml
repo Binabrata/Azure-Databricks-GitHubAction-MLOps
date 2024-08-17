@@ -105,12 +105,9 @@ jobs:
     - name: Login via Az module
       uses: azure/login@v2
       with:
-        # creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
         # set this if you will be using PowerShell
-        # enable-AzPSSession: true 
-        client-id: 3494e52f-2760-40fe-b649-77f7cb592450
-        tenant-id: c844e9fc-2759-420a-b6aa-12d797128240
-        subscription-id: 6c8fe7b3-c352-4a9d-80c7-a54c98ff1c9d
+        # enable-AzPSSession: true
 
     # Deploy Databricks Workspace
     - name: Deploy ARM Template (Databricks)
