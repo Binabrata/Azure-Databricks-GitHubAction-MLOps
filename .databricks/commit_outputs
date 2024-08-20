@@ -14,3 +14,5 @@
 # Uncomment the following pattern to include output for all notebooks
 # **
  
+notebooks/MyProject/Training_Evaluation.ipynb
+notebooks/MyProject/Scoring.ipynb
