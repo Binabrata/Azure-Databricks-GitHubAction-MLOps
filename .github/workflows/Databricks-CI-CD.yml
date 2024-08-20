@@ -139,19 +139,6 @@ jobs:
       GitNotebookPath: 'notebooks/MyProject'
 
     steps:
-    - name: Display Environment Variable
-      uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{ github.TOKEN }}
-        approvers: bdas_stock@hotmail.com
-        minimum-approvals: 1
-        issue-title: "Deploying v1.3.5 to prod from staging"
-        issue-body: "Please approve or deny the deployment of version v1.3.5."
-        exclude-workflow-initiator-as-approver: false
-        additional-approved-words: ''
-        additional-denied-words: ''
-   
-
     # Show the environment variables for debugging
     - name: Display Environment Variable
       uses: azure/powershell@v1
@@ -286,6 +273,18 @@ jobs:
       GitNotebookPath: 'notebooks/MyProject'
 
     steps:
+    - name: Need Approval for Deployment
+      uses: trstringer/manual-approval@v1
+      with:
+        secret: ${{ github.TOKEN }}
+        approvers: binabrata.das@gmail.com
+        minimum-approvals: 1
+        issue-title: "Deploying v1.3.5 to prod from staging"
+        issue-body: "Please approve or deny the deployment of version v1.3.5."
+        exclude-workflow-initiator-as-approver: false
+        additional-approved-words: ''
+        additional-denied-words: ''
+        
     # Show the environment variables for debugging
     - name: Display Environment Variable
       uses: azure/powershell@v1
