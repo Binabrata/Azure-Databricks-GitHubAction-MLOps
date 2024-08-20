@@ -124,10 +124,36 @@ def train_keras_model(X, y):
 databricks configure --token
 enter host (with worksapce id start with ?O)
 enter token of model dev workspace
+
+# Following are based on Databricks CLI below the version v205
 databricks secrets create-scope --scope modelregistery
-databricks secrets put --scope modelregistery --key modelregistery-token --string-value dapi5d4a1a907559461e73117957709bfbb6-2
-databricks secrets put --scope modelregistery --key modelregistery-workspace-id --string-value 8074051404611178
-databricks secrets put --scope modelregistery --key modelregistery-host --string-value https://adb-8074051404611178.18.azuredatabricks.net/
+databricks secrets put --scope modelregistery --key modelregistery-token --string-value dapi2916299f07971facf1525b9ed55330ed-3
+databricks secrets put --scope modelregistery --key modelregistery-workspace-id --string-value 169972685418941
+databricks secrets put --scope modelregistery --key modelregistery-host --string-value https://adb-169972685418941.1.azuredatabricks.net/
+
+# Following are based on Databricks CLI version v205 or above
+
+databricks secrets create-scope modelregistery
+
+databricks secrets put-secret --json '{
+  "scope": "modelregistery",
+  "key": "modelregistery-token",
+  "string_value": "dapi2916299f07971facf1525b9ed55330ed-3"
+}'
+
+databricks secrets put-secret --json '{
+  "scope": "modelregistery",
+  "key": "modelregistery-workspace-id",
+  "string_value": "169972685418941"
+}'
+
+databricks secrets put-secret --json '{
+  "scope": "modelregistery",
+  "key": "modelregistery-host",
+  "string_value": "https://adb-169972685418941.1.azuredatabricks.net/"
+}'
+
+databricks secrets list-secrets modelregistery
 
 # COMMAND ----------
 
