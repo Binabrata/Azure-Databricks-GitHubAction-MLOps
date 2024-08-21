@@ -98,6 +98,11 @@ done
             language="PYTHON"
         fi
 
+        if [[ "$filename" == *ipynb ]]
+        then
+            language="PYTHON"
+        fi
+        
         if [[ "$filename" == *r ]]
         then
             language="R"
